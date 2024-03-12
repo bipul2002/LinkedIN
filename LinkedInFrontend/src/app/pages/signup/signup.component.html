@@ -1,0 +1,52 @@
+
+<h1><b>Make the most of your professional life</b></h1>
+
+<div class="signup-container">
+    <h2>Create an account</h2>
+  
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Full Name" [(ngModel)]="user.name" name="name" required>
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Email" [(ngModel)]="user.email" name="email" type="email" required>
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Password" [(ngModel)]="user.password" name="password" type="password" required>
+    </mat-form-field>
+  
+    <mat-form-field class="half-width">
+      <mat-label>Age</mat-label>
+      <mat-select placeholder="Select" [(ngModel)]="user.age" name="age" required>
+        <mat-option *ngFor="let ageOption of ageOptions" [value]="ageOption">{{ ageOption }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <textarea matInput placeholder="Address" [(ngModel)]="user.address" name="address" rows="3" required></textarea>
+    </mat-form-field>
+  
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Phone Number" [(ngModel)]="user.phone" name="phone" required>
+    </mat-form-field>
+
+    <p>
+        By clicking Agree & Join, you agree to the LinkedIn
+        <a class="terms-link">User Agreement</a>,
+        <a class="terms-link">Privacy Policy</a>, and
+        <a class="terms-link">Cookie Policy</a>.
+      </p>
+  
+    <button (click)="submitForm()">Aggree & Join</button>
+    <br>
+    <div class="third-party-join__line-container">
+      <span class="third-party-join__line-above"></span>
+      <span class="third-party-join__or-span">OR</span>
+      <span class="third-party-join__line-below"></span>
+    </div>
+
+    <p class="already-member">
+      Already on LinkedIn? <a routerLink="/login">Sign in</a>
+    </p>
+  </div>

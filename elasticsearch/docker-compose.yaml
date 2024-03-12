@@ -1,0 +1,29 @@
+version: '3'
+services:
+  elasticsearch:
+    image: elasticsearch:8.8.0
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+      - ./certificates:/usr/share/elasticsearch/config/ssl_certificates
+      - elasticsearch_data:/usr/share/elasticsearch/data
+    environment:
+      - discovery.type=single-node
+      - cluster.name=elastic-cluster
+      - bootstrap.memory_lock=true
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+      - xpack.security.enabled=true
+      - ELASTIC_USERNAME=elastic
+      - ELASTIC_PASSWORD=elastic
+      - xpack.security.http.ssl.enabled=false
+      - xpack.security.http.ssl.key=/usr/share/elasticsearch/config/ssl_certificates/key.pem
+      - xpack.security.http.ssl.certificate=/usr/share/elasticsearch/config/ssl_certificates/cert.pem
+
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+
+volumes:
+  elasticsearch_data:

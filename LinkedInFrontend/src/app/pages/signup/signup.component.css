@@ -1,0 +1,118 @@
+/* signup.component.css */
+
+body {
+  background-color: #be0b0b; /* Set your desired background color */
+  margin: 0;
+  padding: 0;
+}
+
+.signup-container {
+  max-width: 500px;
+  margin: 50px auto; /* Add margin for space at the top */
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(252, 252, 252); /* Set the background color for the container */
+  border-radius: 15px;
+  
+}
+
+.full-width {
+  width: 100%;
+}
+
+.half-width {
+  width: 48%;
+}
+
+button {
+  margin-top: 20px;
+}
+
+h1{
+  text-align: center;
+  margin: 50px auto;
+ 
+}
+
+.terms-link {
+  color: #0077cc; /* Sea blue color */
+  text-decoration: underline; /* Optional: Adds underline to the links */
+  cursor: pointer; /* Optional: Adds a pointer cursor on hover for better user experience */
+}
+
+button {
+  background-color: #0a66c2;
+  color: #fff; /* Text color */
+  width: 100%;
+  border-radius: 15px; /* Border radius for curved corners */
+  padding: 15px 20px; /* Increase padding for larger size */
+  font-size: 16px; /* Adjust font size */
+  margin-top: 20px; /* Margin for spacing */
+  display: block; /* Ensure it takes the full width of the container */
+  margin-left: auto; /* Center the button horizontally */
+  margin-right: auto;
+}
+
+.logo-container {
+  padding: 20px; /* Adjust the padding as needed */
+  padding-right: 1500px;
+}
+
+
+.logo {
+  margin: 50px auto;
+width: 100px; /* Adjust the width as needed */
+height: auto; /* Maintain aspect ratio */
+display: block; /* Ensure it's a block element */
+margin-left: auto; /* Center the image horizontally */
+margin-right: auto;
+}
+
+.third-party-join__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.third-party-join__line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.third-party-join__or-span {
+  margin: 0 10px;
+  font-weight: bold;
+  color: #000;
+}
+
+.third-party-join__line-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Additional styling for the lines */
+.third-party-join__line-above,
+.third-party-join__line-below {
+  height: 1px;
+  background-color: #ccc;
+  flex-grow: 1;
+  content: "";
+}
+
+.already-member {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signin-link {
+  color: #0077cc;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.signin-link:visited {
+  color: #0077cc; /* Sea blue color */
+}
